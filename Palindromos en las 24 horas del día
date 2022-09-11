@@ -1,0 +1,7 @@
+for horas in range (0,24):
+  transhoras=str(horas).zfill(2)
+  for minutos in range (0,60):
+    transminutos=str(minutos).zfill(2)
+    transminutos[::-1]
+    if(transhoras == transminutos):
+      print(transhoras,":",transminutos)
