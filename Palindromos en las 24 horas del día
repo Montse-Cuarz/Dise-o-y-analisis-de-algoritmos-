@@ -8,4 +8,4 @@ for horas in range (0,24):
       cont=cont+1;
       print(transhoras,":",transminutos)
       
-print(cont)
+print("Los palindromos en las horas del día son: ",cont)
