@@ -1,0 +1,47 @@
+
+package ordenamiento_seleccion;
+
+/**
+ *
+ * @author Montse García
+ *  
+ */
+public class Ordenamiento_seleccion {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       seleccion();
+    }
+    
+    public static void seleccion(){
+        int []arre= {23,12,8,7,1,4,3,2,11};
+        int pivote=0;
+        int temp=0;
+        int aux=0;
+        int min=0;
+        System.out.println("El arreglo desordenado es ");
+        for (int i=0; i<arre.length;i++){
+                System.out.println(arre[i]);
+            } 
+        
+        for (pivote=0;pivote< arre.length;pivote++){
+            min=pivote;
+            for(aux=pivote+1; aux<arre.length;aux++){
+                if(arre[aux]<arre[min]){
+                    min=aux;
+                }
+            }
+            temp=arre[pivote];
+            arre[pivote]=arre[min];
+            arre[min]=temp;
+            
+        }
+        
+        System.out.println("El arreglo ordenado es ");
+        for (int i=0; i<arre.length;i++){
+                System.out.println(arre[i]);
+            } 
+    }
+}
