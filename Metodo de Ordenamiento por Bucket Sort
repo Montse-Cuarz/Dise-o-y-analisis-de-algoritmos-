@@ -1,0 +1,39 @@
+def seleccion(arreglo):
+  pivote=0
+  temp=0
+  aux=0
+  min=0
+
+
+  for pivote in range (len(arreglo)):
+    min=pivote
+    for aux in range (pivote+1,(len(arreglo)),aux+1):
+      if arreglo[aux] < arreglo[min]:
+        min=aux
+  
+    temp=arreglo[pivote]
+    arreglo[pivote]=arreglo[min]
+    arreglo[min]=temp
+  return arreglo
+  
+  def cubeta(datos, slots):
+  x=0
+  slots=10
+  contador=0
+  cubetas=[]
+  for i in range (0,10,1):
+    cubetas.append([])
+  for index in range (len(datos)):
+    num=datos[index]//slots
+    cubetas[num].append(datos[index])
+  for recorrido in range(len(cubetas)):
+    x=seleccion(cubetas[recorrido])
+    cubetas[recorrido]=x
+
+  for j in range(0,len(cubetas),1):
+    for k in range (len(cubetas[j])):
+      print(cubetas[j][k])
+      
+  Numeros=[70,12,11,78,40,33,4,31,57,10,41,22,89,88,97,13]
+print("Los datos ordenados son:")
+cubetas=cubeta(Numeros,10)
